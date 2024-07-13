@@ -36,6 +36,7 @@ header nav ul {
   display: flex;
   justify-content: center;
   margin-top: 10px;
+  flex-wrap: wrap;
 }
 
 header nav ul li {
@@ -97,6 +98,7 @@ header nav ul li a:hover {
   display: flex;
   justify-content: space-around;
   text-align: center;
+  flex-wrap: wrap;
 }
 
 #features .feature {
@@ -104,6 +106,7 @@ header nav ul li a:hover {
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
+  margin-bottom: 20px;
 }
 
 #features .feature:hover {
@@ -136,12 +139,14 @@ header nav ul li a:hover {
 #screenshots .gallery {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 #screenshots .gallery img {
   max-width: 30%;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
 #testimonials {
@@ -218,4 +223,43 @@ footer .social-media a {
 
 footer .social-media a:hover {
   color: #ff9900;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+  }
+
+  #features .feature {
+    width: 100%;
+  }
+
+  #screenshots .gallery img {
+    max-width: 80%;
+  }
+
+  #intro {
+    padding: 100px 20px 50px;
+  }
+
+  #features {
+    padding: 30px 0;
+  }
+
+  #screenshots {
+    padding: 30px 0;
+  }
+
+  #testimonials {
+    padding: 30px 0;
+  }
+
+  #download {
+    padding: 30px 0;
+  }
+
+  footer {
+    padding: 10px 0;
+  }
 }
